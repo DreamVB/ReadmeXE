@@ -1,0 +1,506 @@
+object frmmain: Tfrmmain
+  Left = 404
+  Height = 777
+  Top = 128
+  Width = 1504
+  Caption = 'Ben’s Readme Generator XE'
+  ClientHeight = 777
+  ClientWidth = 1504
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.2.2.0'
+  WindowState = wsFullScreen
+  object GroupBox1: TGroupBox
+    Left = 312
+    Height = 712
+    Top = 24
+    Width = 925
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'Editor'
+    ClientHeight = 682
+    ClientWidth = 921
+    TabOrder = 1
+    object txtEd: TMemo
+      Left = 16
+      Height = 519
+      Top = 96
+      Width = 892
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -20
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnKeyPress = txtEdKeyPress
+      ParentFont = False
+      ScrollBars = ssBoth
+      TabOrder = 0
+      WantTabs = True
+    end
+    object cmdNew: TSpeedButton
+      Left = 20
+      Height = 41
+      Top = 628
+      Width = 116
+      Anchors = [akLeft, akBottom]
+      Caption = 'New'
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000000001000000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF00000100000001008080
+        80FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+        C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FF000000FF00000100000001008080
+        80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF00000100000001008080
+        80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF00000100000001008080
+        80FFFFFFFFFFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+        C0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF00000100000001008080
+        80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF00000100000001008080
+        80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF00000100000001008080
+        80FFFFFFFFFFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+        C0FFC0C0C0FFFFFFFFFFFFFFFFFFFFFFFFFF000000FF00000100000001008080
+        80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF00000100000001008080
+        80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF00000100000001008080
+        80FFFFFFFFFFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+        C0FFC0C0C0FFFFFFFFFFFFFFFFFFFFFFFFFF000000FF00000100000001008080
+        80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF00000100000001008080
+        80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFC0C0C0FF000000FF000000FF000000FF00000100000001008080
+        80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFC0C0C0FFFFFFFFFF000000FF0000010000000100000001008080
+        80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFC0C0C0FF000000FF000001000000010000000100000001008080
+        80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+        80FF808080FF808080FF00000100000001000000010000000100
+      }
+      OnClick = cmdNewClick
+    end
+    object cmdNew1: TSpeedButton
+      Left = 152
+      Height = 41
+      Top = 628
+      Width = 116
+      Anchors = [akLeft, akBottom]
+      Caption = 'Open'
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000000001000000
+        0100000001000000010000000100000001000000010000000100000001000000
+        0100000001000000010000000100000001000000010000000100000001000000
+        010018799CFF18799CFF18799CFF18799CFF18799CFF18799CFF18799CFF1879
+        9CFF18799CFF18799CFF18799CFF18799CFF18799CFF0000010000000100188E
+        B5FF188EB5FF188EB5FF188EB5FF188EB5FF188EB5FF188EB5FF188EB5FF188E
+        B5FF188EB5FF188EB5FF188EB5FF188EB5FF188EB5FF18799CFF319EBDFF63CB
+        FFFF188EB5FF9CFFFFFF6BD7FFFF6BD7FFFF6BD7FFFF6BD7FFFF6BD7FFFF6BD7
+        FFFF6BD7FFFF6BD7FFFF39B2DEFF9CF3FFFF188EB5FF18799CFF319EBDFF63CB
+        FFFF188EB5FF9CFFFFFF7BE3FFFF7BE3FFFF7BE3FFFF7BE3FFFF7BE3FFFF7BE3
+        FFFF7BE3FFFF7BDFFFFF42B2DEFF9CFFFFFF188EB5FF18799CFF319EBDFF63CB
+        FFFF188EB5FF9CFFFFFF84E7FFFF84E7FFFF84E7FFFF84E7FFFF84E7FFFF84E7
+        FFFF84E7FFFF84EBFFFF4AB6DEFFA5F7FFFF188EB5FF18799CFF319EBDFF63CB
+        FFFF188EB5FF9CFFFFFF94FBFFFF94FBFFFF94FBFFFF94FBFFFF94FBFFFF94FB
+        FFFF94FBFFFF8CF3FFFF52BEE7FF9CFFFFFF188EB5FF18799CFF319EBDFF6BD3
+        FFFF188EB5FF9CFFFFFF9CFFFFFF9CFFFFFF9CFFFFFFA5F7FFFF9CFFFFFF9CFF
+        FFFF9CFFFFFF9CFFFFFF63CBFFFF9CFFFFFF188EB5FF18799CFF319EBDFF7BDF
+        FFFF188EB5FFFFFFFFFFF7FBFFFFF7FBFFFFF7FBFFFFF7FBFFFFF7FBFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFF84D7F7FFF7FBFFFF188EB5FF18799CFF319EBDFF84EB
+        FFFF84E7FFFF188EB5FF188EB5FF188EB5FF188EB5FF188EB5FF188EB5FF188E
+        B5FF188EB5FF188EB5FF188EB5FF188EB5FF188EB5FF00000100319EBDFF9CF3
+        FFFF8CF7FFFF8CF7FFFF8CF7FFFF8CF7FFFF8CF3FFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFF107DA5FF000001000000010000000100319EBDFFFFFF
+        FFFF9CFFFFFF9CFFFFFF9CFFFFFF9CFFFFFFFFFFFFFF188EB5FF188EB5FF188E
+        B5FF188EB5FF188EB5FF107DA5FF00000100000001000000010000000100319E
+        BDFFFFFFFFFFFFFFFFFFFFFFFFFFF7FBFFFF319EBDFF00000100000001000000
+        0100000001000000010000000100000001000000010000000100000001000000
+        0100319EBDFF319EBDFF319EBDFF319EBDFF0000010000000100000001000000
+        0100000001000000010000000100000001000000010000000100000001000000
+        0100000001000000010000000100000001000000010000000100000001000000
+        0100000001000000010000000100000001000000010000000100000001000000
+        0100000001000000010000000100000001000000010000000100000001000000
+        0100000001000000010000000100000001000000010000000100
+      }
+      OnClick = cmdNew1Click
+    end
+    object cmdSave: TSpeedButton
+      Left = 280
+      Height = 41
+      Top = 628
+      Width = 116
+      Anchors = [akLeft, akBottom]
+      Caption = 'Save'
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000000001000000
+        0100000001000000010000000100000001000000010000000100000001000000
+        0100000001000000010000000100000001000000010000000100000001000000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000001000000010000000100808080FF8080
+        80FF808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+        80FF808080FF808080FF808080FF000000FF0000010000000100808080FFC0C0
+        C0FFC0C0C0FFC0C0C0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC0C0C0FFC0C0
+        C0FFC0C0C0FFC0C0C0FF808080FF808080FF000000FF00000100808080FFC0C0
+        C0FF808080FF808080FF000000FF000000FF000000FF000000FF808080FF8080
+        80FF808080FFC0C0C0FF808080FF808080FF000000FF00000100808080FFC0C0
+        C0FFC0C0C0FFC0C0C0FF808080FF808080FF808080FF808080FFC0C0C0FFC0C0
+        C0FFC0C0C0FFC0C0C0FF808080FF808080FF000000FF00000100808080FFC0C0
+        C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+        C0FF0000FFFFC0C0C0FF808080FF808080FF000000FF00000100808080FFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000001008080
+        80FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FF808080FF808080FF8080
+        80FF808080FF000000FF808080FF808080FF808080FF000000FF000001000000
+        0100808080FF808080FF808080FF808080FF808080FF808080FF808080FF8080
+        80FF808080FF808080FF808080FF808080FF808080FF000000FF000001000000
+        01000000010000000100000001000000010000000100808080FF808080FF8080
+        80FF000000FFFFFFFFFF808080FF808080FF808080FF000000FF000001000000
+        01000000010000000100000001000000010000000100808080FF808080FF8080
+        80FF000000FFFFFFFFFF808080FF808080FF808080FF000000FF000001000000
+        01000000010000000100000001000000010000000100808080FF808080FF8080
+        80FF808080FF808080FF808080FF808080FF808080FF000000FF000001000000
+        01000000010000000100000001000000010000000100808080FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000001000000
+        01000000010000000100000001000000010000000100808080FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000001000000
+        01000000010000000100000001000000010000000100808080FF808080FF8080
+        80FF808080FF808080FF808080FF808080FF808080FF808080FF
+      }
+      OnClick = cmdSaveClick
+    end
+    object GroupBox4: TGroupBox
+      Left = 20
+      Height = 80
+      Top = 8
+      Width = 1275
+      Caption = 'Markdown'
+      ClientHeight = 50
+      ClientWidth = 1271
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Segoe UI Semibold'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      object Label1: TLabel
+        Left = 24
+        Height = 25
+        Top = 8
+        Width = 68
+        Caption = 'Headers'
+        ParentColor = False
+      end
+      object cboHeaders: TComboBox
+        Left = 102
+        Height = 33
+        Top = 5
+        Width = 50
+        ItemHeight = 25
+        Items.Strings = (
+          '1'
+          '2'
+          '3'
+          '4'
+          '5'
+          '6'
+        )
+        OnChange = cboHeadersChange
+        Style = csDropDownList
+        TabOrder = 0
+      end
+      object lblStyle: TLabel
+        Left = 168
+        Height = 25
+        Top = 8
+        Width = 44
+        Caption = 'Style:'
+        ParentColor = False
+      end
+      object cboStyle: TComboBox
+        Left = 224
+        Height = 33
+        Top = 5
+        Width = 152
+        ItemHeight = 25
+        Items.Strings = (
+          'Bold'
+          'Italic'
+          'Bold/Italic'
+          'Strikethrough'
+        )
+        OnChange = cboStyleChange
+        Style = csDropDownList
+        TabOrder = 1
+      end
+      object cmdblockquote: TSpeedButton
+        Left = 387
+        Height = 33
+        Top = 5
+        Width = 88
+        Caption = 'Quote'
+        OnClick = cmdblockquoteClick
+      end
+      object cmdList: TSpeedButton
+        Left = 479
+        Height = 33
+        Top = 5
+        Width = 88
+        Caption = 'List 1'
+        OnClick = cmdListClick
+      end
+      object cmdList1: TSpeedButton
+        Left = 571
+        Height = 33
+        Top = 5
+        Width = 88
+        Caption = 'List 2'
+        OnClick = cmdList1Click
+      end
+      object cmdImg: TSpeedButton
+        Left = 663
+        Height = 33
+        Top = 5
+        Width = 88
+        Caption = 'img'
+        OnClick = cmdImgClick
+      end
+      object cmdCode1: TSpeedButton
+        Left = 759
+        Height = 33
+        Top = 5
+        Width = 88
+        Caption = 'code'
+        OnClick = cmdCode1Click
+      end
+      object cmdCode2: TSpeedButton
+        Left = 855
+        Height = 33
+        Top = 5
+        Width = 48
+        Caption = '---'
+        OnClick = cmdCode2Click
+      end
+    end
+  end
+  object gSelections: TGroupBox
+    Left = 16
+    Height = 232
+    Top = 32
+    Width = 288
+    Caption = 'Selections'
+    ClientHeight = 202
+    ClientWidth = 284
+    TabOrder = 0
+    object lstTopics: TListBox
+      Left = 15
+      Height = 136
+      Top = 8
+      Width = 256
+      Items.Strings = (
+        'Author'
+        'Bug Reports'
+        'Comments'
+        'Contribute'
+        'Copyright'
+        'Credits'
+        'Dependencies'
+        'Description'
+        'Features'
+        'Feedback'
+        'History'
+        'Information'
+        'Install'
+        'Installation and usage'
+        'License'
+        'System Requirement'
+        'Uninstall'
+        'Version'
+      )
+      ItemHeight = 25
+      Sorted = True
+      TabOrder = 0
+    end
+    object cmdInsert1: TSpeedButton
+      Left = 19
+      Height = 39
+      Top = 152
+      Width = 245
+      Caption = 'Insert'
+      OnClick = cmdInsert1Click
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 36
+    Top = 741
+    Width = 1504
+    Panels = <>
+  end
+  object GroupBox2: TGroupBox
+    Left = 16
+    Height = 192
+    Top = 280
+    Width = 288
+    Caption = 'Software Types'
+    ClientHeight = 162
+    ClientWidth = 284
+    TabOrder = 3
+    object lstTopics1: TListBox
+      Left = 15
+      Height = 80
+      Top = 8
+      Width = 256
+      Items.Strings = (
+        'Beta'
+        'Demoware'
+        'Freeware'
+        'Opensource'
+        'Shareware'
+        'Trial'
+      )
+      ItemHeight = 25
+      Sorted = True
+      TabOrder = 0
+    end
+    object cmdInsert2: TSpeedButton
+      Left = 16
+      Height = 39
+      Top = 104
+      Width = 252
+      Caption = 'Insert'
+      OnClick = cmdInsert2Click
+    end
+  end
+  object gChars: TGroupBox
+    Left = 1245
+    Height = 535
+    Top = 32
+    Width = 238
+    Anchors = [akTop, akRight, akBottom]
+    Caption = 'Insert Chars'
+    ClientHeight = 505
+    ClientWidth = 234
+    TabOrder = 4
+    object lstChars: TListBox
+      Left = 15
+      Height = 287
+      Top = 8
+      Width = 209
+      Anchors = [akTop, akLeft, akBottom]
+      ItemHeight = 0
+      TabOrder = 0
+    end
+    object cmdInsert3: TSpeedButton
+      Left = 15
+      Height = 39
+      Top = 448
+      Width = 209
+      Anchors = [akLeft, akBottom]
+      Caption = 'Insert'
+      OnClick = cmdInsert3Click
+    end
+    object lblInsertBefore2: TLabeledEdit
+      Left = 15
+      Height = 33
+      Top = 335
+      Width = 209
+      Anchors = [akLeft, akBottom]
+      EditLabel.Height = 25
+      EditLabel.Width = 209
+      EditLabel.Caption = 'Insert Before'
+      EditLabel.ParentColor = False
+      TabOrder = 1
+    end
+    object lblInsertAfter1: TLabeledEdit
+      Left = 15
+      Height = 33
+      Top = 408
+      Width = 209
+      Anchors = [akLeft, akBottom]
+      EditLabel.Height = 25
+      EditLabel.Width = 209
+      EditLabel.Caption = 'Insert After'
+      EditLabel.ParentColor = False
+      TabOrder = 2
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 1247
+    Height = 160
+    Top = 575
+    Width = 240
+    Anchors = [akRight, akBottom]
+    Caption = 'Date Time'
+    ClientHeight = 130
+    ClientWidth = 236
+    TabOrder = 5
+    object cmdInsert4: TSpeedButton
+      Left = 15
+      Height = 39
+      Top = 80
+      Width = 209
+      Caption = 'Insert'
+      OnClick = cmdInsert4Click
+    end
+    object lblDateTime: TLabeledEdit
+      Left = 15
+      Height = 33
+      Top = 32
+      Width = 209
+      EditLabel.Height = 25
+      EditLabel.Width = 209
+      EditLabel.Caption = 'Format'
+      EditLabel.ParentColor = False
+      TabOrder = 0
+      Text = 'DD/MM/YYYY hh:mm:ss'
+    end
+  end
+  object gSelections1: TGroupBox
+    Left = 16
+    Height = 256
+    Top = 488
+    Width = 288
+    Caption = 'Markdown Templates'
+    ClientHeight = 226
+    ClientWidth = 284
+    TabOrder = 6
+    object lstTemplates: TListBox
+      Left = 16
+      Height = 152
+      Top = 8
+      Width = 256
+      Items.Strings = (
+        'Authors'
+        'Demo'
+        'FAQ'
+        'Features'
+        'Installation'
+        'License'
+        'Logo'
+        'Run The Program'
+        'Screenshots'
+        'Title and Description'
+        'Used By'
+      )
+      ItemHeight = 25
+      Sorted = True
+      TabOrder = 0
+    end
+    object cmdInsertTemplate: TSpeedButton
+      Left = 19
+      Height = 39
+      Top = 168
+      Width = 245
+      Caption = 'Insert'
+      OnClick = cmdInsertTemplateClick
+    end
+  end
+end
